@@ -1,0 +1,10 @@
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
+
+Style/IfUnlessModifier:
+  MaxLineLength: 80
+  Enabled: false
+
