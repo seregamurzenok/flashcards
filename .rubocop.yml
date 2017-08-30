@@ -1,3 +1,7 @@
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+
 Metrics/LineLength:
   Description: 'Limit lines to 80 characters.'
   StyleGuide: '#80-character-limits'
@@ -19,3 +23,20 @@ Style/StringLiteralsInInterpolation:
                  Checks if uses of quotes inside expressions in interpolated
                  strings match the configured preference.
   Enabled: false
+
+Layout/TrailingWhitespace:
+  Description: 'Avoid trailing whitespace.'
+  StyleGuide: '#no-trailing-whitespace'
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Description: >-
+                 Add the frozen_string_literal comment to the top of files
+                 to help transition from Ruby 2.3.0 to Ruby 3.0.
+  Enabled: false
+
+Performance/UnfreezeString:
+  Description: 'Use unary plus to get an unfrozen string literal.'
+  Enabled: false
+
+
