@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class CardTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "index" do
+    get :index 
+    assert_template "index"
+  end 
 end
