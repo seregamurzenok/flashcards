@@ -6,6 +6,7 @@ class Card < ApplicationRecord
   before_validation :set_review_date
 
   private
+
     def set_review_date
       create_date = Time.now
 
