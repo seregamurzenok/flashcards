@@ -8,8 +8,7 @@ class Card < ApplicationRecord
   private
 
   def set_review_date
-    now = DateTime.current
-    self.review_date = now + 3.day
+    self.review_date = DateTime.current + 3.days
   end 
     
   def original_and_translated_texts_are_not_equal
