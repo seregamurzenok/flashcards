@@ -1,3 +1,4 @@
+# Parser of web pages and creation of test records in the database
 require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
