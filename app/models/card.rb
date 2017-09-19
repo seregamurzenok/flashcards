@@ -5,11 +5,15 @@ class Card < ApplicationRecord
 
   before_validation :set_review_date
 
-  private
+  def check_translation(translation)
+    self.translated_text == translation
+  end
 
   def set_review_date
     self.review_date = DateTime.current + 3.days
-  end 
+  end
+
+  private 
     
   def original_and_translated_texts_are_not_equal
     return unless original_text.strip.capitalize == translated_text.strip.capitalize
