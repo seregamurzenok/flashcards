@@ -6,11 +6,11 @@ class HomeController < ApplicationController
   def check_translation
     @card = Card.find(params[:card_id])
     if @card.check_translation(params[:q])
-      flash[:notice] = "Правильный перевод"
+      flash = {:notice => "Правильный перевод"}
       @card.set_review_date
       @card.update(:review_date => @card.review_date)
     else 
-      flash[:notice] = "Неправильный перевод"
+      flash = {:notice => "Неправильный перевод"}
     end
     redirect_to root_path  
   end  
